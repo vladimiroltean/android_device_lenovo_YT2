@@ -1,0 +1,21 @@
+# system.prop for YT2
+
+# Dalvik
+ro.dalvik.vm.isa.arm=x86
+
+# Drm
+drm.service.enabled=true
+
+# Gps
+ro.spid.gps.tty=ttyMFD1
+
+# Graphics
+ro.opengles.version=196609
+ro.sf.lcd_density=320
+
+# Houdini
+ro.enable.native.bridge.exec=1
+
+# USB
+persist.sys.isUsbOtgEnabled=1
+persist.sys.usb.config=mtp
