@@ -14,14 +14,8 @@
 
 $(call inherit-product, device/lenovo/yt2/full_yt2.mk)
 
-# Inherit yt2-specific vendor tree
-$(call inherit-product-if-exists, vendor/lenovo/yt2/yt2-vendor.mk)
-
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_yt2
-PRODUCT_BRAND := Lenovo
-PRODUCT_MODEL := YOGA Tablet 2-830F
-PRODUCT_MANUFACTURER := LENOVO
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=YT2_8_row_wifi \

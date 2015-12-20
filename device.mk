@@ -214,3 +214,6 @@ PRODUCT_PACKAGES += \
 
 # WiFi Firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm43341/device-bcm.mk)
+
+# Inherit yt2-specific vendor tree
+$(call inherit-product-if-exists, vendor/lenovo/yt2/yt2-vendor.mk)
