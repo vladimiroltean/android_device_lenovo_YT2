@@ -152,6 +152,7 @@ BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_HOSTAPD_DRIVER        := NL80211
+WIFI_DRIVER_MODULE_NAME     := "bcm43241"
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcm43241/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcmdhd.bin_43241_b4"
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcm43241.ko"
