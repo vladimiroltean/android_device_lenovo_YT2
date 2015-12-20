@@ -26,8 +26,8 @@
 #include "drm_mode.h"
 #endif
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
-#include "psb_ttm_fence_user.h"
-#include "psb_ttm_placement_user.h"
+#include <drm/psb_ttm_fence_user.h>
+#include <drm/psb_ttm_placement_user.h>
 #define DRM_PSB_EXTENSION 0x50
 #define DRM_PSB_GETPAGEADDRS 0x51
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
