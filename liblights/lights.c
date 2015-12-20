@@ -74,7 +74,7 @@ static int rgb_to_brightness(struct light_state_t const *state)
         + (150*((color>>8) & 0x00ff)) + (29*(color & 0x00ff))) >> 8;
 }
 
-static int set_light_backlight(UNUSED struct light_device_t *dev,
+static int set_light_backlight(struct light_device_t *dev,
             struct light_state_t const *state)
 {
     int ret = 0;
@@ -98,25 +98,26 @@ static int close_lights(struct light_device_t *dev)
 
 static int set_light_leds(int brightness, int blink)
 {
+    pthread_mutex_lock(&g_lock);
     write_int(LED_FILE, brightness);
     write_int(LED_BLINK, blink);
-
+    pthread_mutex_unlock(&g_lock);
     return 0;
 }
 
-static int set_light_leds_battery(UNUSED struct light_device_t *dev,
+static int set_light_leds_battery(struct light_device_t *dev,
             struct light_state_t const *state)
 {
     return set_light_leds(128, 0);
 }
 
-static int set_light_leds_notifications(UNUSED struct light_device_t *dev,
+static int set_light_leds_notifications(struct light_device_t *dev,
             struct light_state_t const *state)
 {
     return set_light_leds(128, 0);
 }
 
-static int set_light_leds_attention(UNUSED struct light_device_t *dev,
+static int set_light_leds_attention(struct light_device_t *dev,
             struct light_state_t const *state)
 {
     return set_light_leds(255, 1);
