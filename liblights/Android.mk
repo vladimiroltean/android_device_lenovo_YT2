@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH:= $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_PROVIDES_LIBLIGHT),true)
 ifeq ($(TARGET_BOARD_PLATFORM),baytrail)
