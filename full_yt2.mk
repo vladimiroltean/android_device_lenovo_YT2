@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from yt2 device
 $(call inherit-product, device/lenovo/yt2/device.mk)
@@ -23,7 +23,5 @@ $(call inherit-product, device/lenovo/yt2/device.mk)
 PRODUCT_RUNTIMES := runtime_libart_default
 
 PRODUCT_NAME := full_yt2
-PRODUCT_DEVICE := yt2
-PRODUCT_BRAND := Lenovo
-PRODUCT_MODEL := YOGA Tablet 2-830F
-PRODUCT_MANUFACTURER := LENOVO
+
+$(call inherit-product-if-exists, vendor/lenovo/yt2/yt2-vendor.mk)

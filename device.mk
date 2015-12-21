@@ -37,10 +37,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1200
-
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera3_profiles.xml:system/etc/camera3_profiles.xml \
@@ -214,6 +210,3 @@ PRODUCT_PACKAGES += \
 
 # WiFi Firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm43341/device-bcm.mk)
-
-# Inherit yt2-specific vendor tree
-$(call inherit-product-if-exists, vendor/lenovo/yt2/yt2-vendor.mk)

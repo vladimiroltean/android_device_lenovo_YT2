@@ -12,10 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1200
+
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+
+# Inherit device configuration
 $(call inherit-product, device/lenovo/yt2/full_yt2.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_yt2
+PRODUCT_DEVICE := yt2
+PRODUCT_BRAND := Lenovo
+PRODUCT_MODEL := YOGA Tablet 2-830F
+PRODUCT_MANUFACTURER := LENOVO
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=YT2_8_row_wifi \
