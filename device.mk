@@ -149,6 +149,7 @@ PRODUCT_PACKAGES += \
     init.net.eth0.sh \
     init.platform.gengfx.rc \
     init.platform.usb.rc \
+    init.recovery.byt_t_ffrd8.rc \
     init.watchdog.rc \
     init.watchdog.sh \
     init.wifi.rc \
@@ -157,6 +158,8 @@ PRODUCT_PACKAGES += \
     intel_prop.cfg \
     rfkill_bt.sh \
     thermald \
+    uefivar \
+    uefivar_nolog \
     ueventd.byt_t_ffrd8.rc
 
 # Sensors
