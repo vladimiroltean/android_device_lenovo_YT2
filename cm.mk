@@ -22,14 +22,5 @@ $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 # Inherit device configuration
 $(call inherit-product, device/lenovo/yt2/full_yt2.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_yt2
 PRODUCT_DEVICE := yt2
-PRODUCT_BRAND := Lenovo
-PRODUCT_MODEL := YOGA Tablet 2-830F
-PRODUCT_MANUFACTURER := LENOVO
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=YT2_8_row_wifi \
-    BUILD_FINGERPRINT=Lenovo/YT2_8_row_wifi/YT2:5.0.1/LRX22C/YT2-830F_USR_S100191_1511230623_:user/release-keys \
-    PRIVATE_BUILD_DESC="YT2_8_row_wifi-user 5.0.1 LRX22C YT2-830F_USR_S100191_1511230623_WW52_ROW release-keys"
+PRODUCT_NAME := cm_yt2
