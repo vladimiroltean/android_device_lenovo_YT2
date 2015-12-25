@@ -37,7 +37,7 @@ on init
     mkdir /data/misc/audio 0770 audio audio
 
     # Insert hdmi audio driver
-    insmod /lib/modules/hdmi_audio.ko
+    insmod /system/lib/modules/hdmi_audio.ko
 
     # Android creates by-name disk links with the disk controller
     # in the generated path, so that the names pulled out of the GPT
@@ -125,8 +125,8 @@ on boot
     setprop ro.rebootchargermode true
 
     # Load BCM Wifi kernel module for byt_t_ffrd8 at boot time
- #insmod /lib/modules/bcmdhd.ko
-    insmod /lib/modules/bcm43241.ko firmware_path=/system/etc/firmware/fw_bcmdhd.bin_43241_b4 nvram_path=/system/etc/firmware/bcmdhd_aob.cal_43241_b4
+ #insmod /system/lib/modules/bcmdhd.ko
+    insmod /system/lib/modules/bcm43241.ko firmware_path=/system/etc/firmware/fw_bcmdhd.bin_43241_b4 nvram_path=/system/etc/firmware/bcmdhd_aob.cal_43241_b4
 
     #  Enable submix audio path for widi
     setprop widi.audio.module submix
@@ -191,7 +191,7 @@ on post-fs
     chown media system /sys/devices/platform/gpio-keys/disabled_wakeup
 
     # Insert touchscreen module
-    #insmod /lib/modules/atmel_mxt_ts.ko
+    #insmod /system/lib/modules/atmel_mxt_ts.ko
 
     #  Permissions for pshfw update tool
     #chown system system /dev/i2c-5
@@ -328,7 +328,7 @@ on charger
     mount ext4 /dev/block/by-name/logs /logs nosuid nodev barrier=1,data=ordered
 
     start watchdogd
-    insmod /lib/modules/rmi4.ko boot_mode=1
+    insmod /system/lib/modules/rmi4.ko boot_mode=1
 
     # Invoke fuel gauging helper binary to restore config data
     symlink /dev/max170xx /dev/fg
@@ -336,7 +336,7 @@ on charger
     wait /system/bin/fg_conf
     start fg_conf
 
-    insmod /lib/modules/atomisp-css2400b0_v21.ko
+    insmod /system/lib/modules/atomisp-css2400b0_v21.ko
     chmod 0664 /sys/devices/pci0000:00/0000:00:14.0/hsic_enable
     write /sys/devices/pci0000:00/0000:00:14.0/hsic_enable 0
     write /proc/driver/switch 3
