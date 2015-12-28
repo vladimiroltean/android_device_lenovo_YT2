@@ -104,6 +104,9 @@ BOARD_KERNEL_CMDLINE := loglevel=4 console=logk0 earlyprintk=nologger androidboo
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Logd
+TARGET_USES_LOGD := false
+
 # Media
 BOARD_USES_WRS_OMXIL_CORE := true
 BOARD_USES_MRST_OMX := true
