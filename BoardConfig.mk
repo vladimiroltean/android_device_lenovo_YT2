@@ -61,6 +61,9 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# EGL config
+BOARD_EGL_CFG := device/lenovo/yt2/configs/egl.cfg
+
 # Houdini: enable ARM codegen for x86
 BUILD_ARM_FOR_X86 := true
 
