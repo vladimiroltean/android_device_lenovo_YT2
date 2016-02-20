@@ -145,6 +145,9 @@ lib/hw/audio.primary.byt_t_ffrd8.so
 lib/libaudioresample.so
 lib/libevent-listener.so
 lib/libinterface-provider-lib.so
+lib/libmmgrcli.so
+lib/libmmgr_cnx.so
+lib/libmmgr_utils.so
 lib/libmodem-audio-collection.so
 lib/libparameter.so
 lib/libproperty.so
@@ -226,6 +229,7 @@ vendor/firmware/01s5k8aay.drvb
 # DRM
 lib/libkeymaster.so
 lib/hw/keystore.baytrail.so
+lib/libmeimm.so
 lib/liboemcrypto.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
@@ -234,12 +238,39 @@ vendor/lib/libdrmdecrypt.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 
-# EGL
+# Graphics
+bin/coreu
+bin/hdcpd
+lib/egl/libGLES_intel7.so
 lib/hw/gralloc.baytrail.so
+lib/hw/hwcomposer.baytrail.so
+lib/i965_drv_video.so
+lib/libGLES_intel7.so
+lib/libRSDriverMlc_intel7.so
+lib/libRSDriverUmd_intel7.so
+lib/libRSDriver_intel7.so
+lib/libcoreuclient.so
+lib/libcoreuinterface.so
+lib/libcoreuservice.so
+lib/libdrm.so
+lib/libdrm_intel.so
+lib/libgrallocclient.so
+lib/libgrallocgmm.so
+lib/libgsmgr.so
+lib/libhwcservice.so
+lib/libhwcwidi.so
+lib/libigdusc.so
+lib/libivp.so
+lib/libmultidisplay.so
+lib/libpciaccess.so
+lib/libskuwa.so
+lib/libvpp_setting.so
 
 bin/bd_prov
 bin/bcu_cpufreqrel
 bin/fg_conf
+bin/msync
+bin/lenovo_sn
 
 # Firmware
 # *** THIS iS A DUMP OF ALL FILES IN /system/etc/firmware
@@ -272,6 +303,7 @@ etc/firmware/wm5102-dsp1-tx-wb.bin
 etc/firmware/wm5102-dsp1-tx.wmfw
 
 # GPS
+bin/gpscerd
 bin/gpsd
 lib/hw/gps.byt_t_ffrd8.so
 
