@@ -16,7 +16,7 @@
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/lenovo/yt2/full_yt2.mk)
+$(call inherit-product, device/lenovo/YT2/full_YT2.mk)
 
-PRODUCT_DEVICE := yt2
-PRODUCT_NAME := cm_yt2
+PRODUCT_DEVICE := YT2
+PRODUCT_NAME := cm_YT2

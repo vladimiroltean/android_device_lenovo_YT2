@@ -39,7 +39,7 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/yt2/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/YT2/bluetooth
 
 # Bootloader
 TARGET_OTA_ASSERT_DEVICE := YT2,yt2
@@ -62,7 +62,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # EGL config
-BOARD_EGL_CFG := device/lenovo/yt2/configs/egl.cfg
+BOARD_EGL_CFG := device/lenovo/YT2/configs/egl.cfg
 
 # Houdini: enable ARM codegen for x86
 BUILD_ARM_FOR_X86 := true
@@ -151,10 +151,10 @@ TARGET_POWERHAL_VARIANT := baytrail
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-TARGET_RECOVERY_FSTAB := device/lenovo/yt2/rootdir/etc/fstab.byt_t_ffrd8
+TARGET_RECOVERY_FSTAB := device/lenovo/YT2/rootdir/etc/fstab.byt_t_ffrd8
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/lenovo/yt2
+TARGET_RELEASETOOLS_EXTENSIONS := device/lenovo/YT2
 
 # Security
 BUILD_WITH_SECURITY_FRAMEWORK := chaabi_token
@@ -174,4 +174,4 @@ WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcm43241.ko"
 WIFI_DRIVER_MODULE_ARG      := "/system/etc/firmware/fw_bcmdhd.bin_43241_b4 nvram_path=/system/etc/wifi/bcmdhd_aob.cal_43241_b4"
 
 # inherit from the proprietary version
--include vendor/lenovo/yt2/BoardConfigVendor.mk
+-include vendor/lenovo/YT2/BoardConfigVendor.mk

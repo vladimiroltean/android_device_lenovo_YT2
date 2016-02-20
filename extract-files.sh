@@ -2,7 +2,7 @@
 
 set -e
 
-export DEVICE=yt2
+export DEVICE=YT2
 export VENDOR=lenovo
 
 function extract() {
