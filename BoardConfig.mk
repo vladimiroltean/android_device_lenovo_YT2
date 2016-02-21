@@ -62,7 +62,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # EGL config
-BOARD_EGL_CFG := device/lenovo/YT2/configs/egl.cfg
+BOARD_EGL_CFG := device/lenovo/YT2/rootdir/system/etc/egl.cfg
 
 # Houdini: enable ARM codegen for x86
 BUILD_ARM_FOR_X86 := true
@@ -151,10 +151,7 @@ TARGET_POWERHAL_VARIANT := baytrail
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-TARGET_RECOVERY_FSTAB := device/lenovo/YT2/rootdir/etc/fstab.byt_t_ffrd8
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/lenovo/YT2
+TARGET_RECOVERY_FSTAB := device/lenovo/YT2/rootdir/fstab.byt_t_ffrd8
 
 # Security
 BUILD_WITH_SECURITY_FRAMEWORK := chaabi_token

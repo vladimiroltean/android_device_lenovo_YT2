@@ -43,19 +43,19 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/asound.conf:system/etc/asound.conf \
-    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/audio/route_criteria.conf:system/vendor/etc/route_criteria.conf
+    $(LOCAL_PATH)/rootdir/system/etc/asound.conf:system/etc/asound.conf \
+    $(LOCAL_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/rootdir/system/vendor/etc/route_criteria.conf:system/vendor/etc/route_criteria.conf
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+    $(LOCAL_PATH)/rootdir/system/etc/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 # Camera
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera3_profiles.xml:system/etc/camera3_profiles.xml \
-    $(LOCAL_PATH)/configs/cms_device_config.xml:system/etc/cms_device_config.xml \
-    $(LOCAL_PATH)/configs/cms_throttle_config.xml:system/etc/cms_throttle_config.xml
+    $(LOCAL_PATH)/rootdir/system/etc/camera3_profiles.xml:system/etc/camera3_profiles.xml \
+    $(LOCAL_PATH)/rootdir/system/etc/cms_device_config.xml:system/etc/cms_device_config.xml \
+    $(LOCAL_PATH)/rootdir/system/etc/cms_throttle_config.xml:system/etc/cms_throttle_config.xml
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -74,15 +74,15 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf \
-    $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
+    $(LOCAL_PATH)/rootdir/system/etc/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/rootdir/system/etc/gps.xml:system/etc/gps.xml
 
 ADDITIONAL_DEFAULT_PROPERTIES += ro.dalvik.vm.native.bridge=libhoudini.so
 
 # Key layout files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/baytrailaudio_Intel_MID_Audio_Jack.kl:system/usr/keylayout/baytrailaudio_Intel_MID_Audio_Jack.kl \
-    $(LOCAL_PATH)/keylayout/mrst_keypad.kl:system/usr/keychars/mrst_keypad.kl
+    $(LOCAL_PATH)/rootdir/system/usr/keylayout/baytrailaudio_Intel_MID_Audio_Jack.kl:system/usr/keylayout/baytrailaudio_Intel_MID_Audio_Jack.kl \
+    $(LOCAL_PATH)/rootdir/system/usr/keychars/mrst_keypad.kl:system/usr/keychars/mrst_keypad.kl
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -90,11 +90,11 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    $(LOCAL_PATH)/configs/mfx_omxil_core.conf:system/etc/mfx_omxil_core.conf \
-    $(LOCAL_PATH)/configs/video_isv_profile.xml:system/etc/video_isv_profile.xml \
-    $(LOCAL_PATH)/configs/wrs_omxil_components.list:system/etc/wrs_omxil_components.list \
+    $(LOCAL_PATH)/rootdir/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/rootdir/system/etc/mfx_omxil_core.conf:system/etc/mfx_omxil_core.conf \
+    $(LOCAL_PATH)/rootdir/system/etc/video_isv_profile.xml:system/etc/video_isv_profile.xml \
+    $(LOCAL_PATH)/rootdir/system/etc/wrs_omxil_components.list:system/etc/wrs_omxil_components.list \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
@@ -178,7 +178,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensor_hal_config_default.xml:system/etc/sensor_hal_config_default.xml
+    $(LOCAL_PATH)/rootdir/system/etc/sensor_hal_config_default.xml:system/etc/sensor_hal_config_default.xml
 
 # Thermal itux
 ENABLE_ITUXD := true
