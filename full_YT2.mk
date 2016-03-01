@@ -26,8 +26,8 @@ PRODUCT_MODEL := YOGA Tablet 2-830F
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=YT2_8_row_wifi \
-    BUILD_FINGERPRINT=Lenovo/YT2_8_row_wifi/YT2:5.0.1/LRX22C/YT2-830F_USR_S100191_1511230623_:user/release-keys \
-    PRIVATE_BUILD_DESC="YT2_8_row_wifi-user 5.0.1 LRX22C YT2-830F_USR_S100191_1511230623_WW52_ROW release-keys"
+    BUILD_FINGERPRINT=Lenovo/YT2_8_row_wifi/YT2:5.0.1/LRX22C/YT2-830F_USR_S100250_1601190639_:user/release-keys \
+    PRIVATE_BUILD_DESC="YT2_8_row_wifi-user 5.0.1 LRX22C YT2-830F_USR_S100250_1601190639_WW52_ROW release-keys"
 
 # Inherit from YT2 device
 $(call inherit-product, device/lenovo/YT2/device.mk)
