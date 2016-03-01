@@ -304,7 +304,7 @@ etc/firmware/wm5102-dsp1-tx.wmfw
 
 # GPS
 bin/gpscerd
-bin/gpsd
+#bin/gpsd
 lib/hw/gps.byt_t_ffrd8.so
 
 # Houdini

@@ -41,7 +41,7 @@ service gpscerd /system/bin/gpscerd /data/gps/gps.cer
     group system
     oneshot
 
-service gpsd /system/bin/gpsd -c /system/etc/gps.xml
-    class main
-    user gps
-    group system inet radio sdcard_rw net_admin
+#service gpsd /system/bin/gpsd -c /system/etc/gps.xml
+#    class main
+#    user gps
+#    group system inet radio sdcard_rw net_admin
