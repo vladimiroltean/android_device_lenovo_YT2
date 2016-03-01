@@ -313,9 +313,13 @@ etc/binfmt_misc/arm_exe
 bin/houdini
 lib/libhoudini.so
 
-# Media
+# OMX
 lib/libgabi++-mfx.so
+lib/libisv_omx_core.so
 lib/libmdp_omx_core.so
+lib/libmfxhw32.so
+lib/libmfx_mix_h264ve.so
+lib/libmfx_omx_components_hw.so
 lib/libmfx_omx_components_sw.so
 lib/libmfx_omx_core.so
 lib/libmfxsw32.so
@@ -326,7 +330,27 @@ lib/libmixvbp.so
 lib/libmixvbp_vc1.so
 lib/libmixvbp_vp8.so
 lib/libOMXVideoDecoderAVCSecure.so
+lib/libOMXVideoDecoderAVC.so
+lib/libOMXVideoDecoderH263.so
+lib/libOMXVideoDecoderMPEG4.so
+lib/libOMXVideoDecoderVP8.so
+lib/libOMXVideoDecoderWMV.so
+lib/libOMXVideoEncoderAVC.so
+lib/libOMXVideoEncoderH263.so
+lib/libOMXVideoEncoderMPEG4.so
+lib/libpavp.so
+lib/libstagefrighthw.so
+lib/libstagefright_soft_aacdec_mdp.so
+lib/libstagefright_soft_amrdec_mdp.so
+lib/libstagefright_soft_amrenc_mdp.so
+lib/libstagefright_soft_mp3dec_mdp.so
+lib/libstagefright_soft_vorbisdec_mdp.so
 lib/libstlport-mfx.so
+lib/libva-android.so
+lib/libva.so
+lib/libva_videodecoder.so
+lib/libwrs_omxil_common.so
+lib/libwrs_omxil_core_pvwrapped.so
 
 # Sensors
 lib/arm/libnetd_client.so

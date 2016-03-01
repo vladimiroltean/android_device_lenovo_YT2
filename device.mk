@@ -104,44 +104,42 @@ PRODUCT_PACKAGES += \
     topaz_bin
 
 # Media: libva
-PRODUCT_PACKAGES += \
-    libva \
-    libva-android \
-    libva-tpi \
-    vainfo
+#PRODUCT_PACKAGES += \
+#    libva \
+#    libva-android \
+#    libva-tpi \
+#    vainfo
 
 # Media: libstagefrighthw
-PRODUCT_PACKAGES += \
-    libstagefrighthw
+#PRODUCT_PACKAGES += libstagefrighthw
 
 # Media: libmix
-PRODUCT_PACKAGES += \
-    libmixvbp_mpeg4 \
-    libmixvbp_h264 \
-    libmixvbp_h264secure \
-    libmixvbp_vc1 \
-    libmixvbp_vp8 \
-    libva_videodecoder \
-    libva_videoencoder
+#PRODUCT_PACKAGES += \
+#    libmixvbp_mpeg4 \
+#    libmixvbp_h264 \
+#    libmixvbp_h264secure \
+#    libmixvbp_vc1 \
+#    libmixvbp_vp8 \
+#    libva_videodecoder \
+#    libva_videoencoder
 
-PRODUCT_PACKAGES += \
-    libwrs_omxil_common \
-    libwrs_omxil_core_pvwrapped \
-    libOMXVideoDecoderAVC \
-    libOMXVideoDecoderH263 \
-    libOMXVideoDecoderMPEG4 \
-    libOMXVideoDecoderWMV \
-    libOMXVideoDecoderVP8 \
-    libOMXVideoDecoderVP9HWR \
-    libOMXVideoDecoderVP9Hybrid \
-    libOMXVideoEncoderAVC \
-    libOMXVideoEncoderH263 \
-    libOMXVideoEncoderMPEG4 \
-    libOMXVideoEncoderVP8
+#PRODUCT_PACKAGES += \
+#    libwrs_omxil_common \
+#    libwrs_omxil_core_pvwrapped \
+#    libOMXVideoDecoderAVC \
+#    libOMXVideoDecoderH263 \
+#    libOMXVideoDecoderMPEG4 \
+#    libOMXVideoDecoderWMV \
+#    libOMXVideoDecoderVP8 \
+#    libOMXVideoDecoderVP9HWR \
+#    libOMXVideoDecoderVP9Hybrid \
+#    libOMXVideoEncoderAVC \
+#    libOMXVideoEncoderH263 \
+#    libOMXVideoEncoderMPEG4 \
+#    libOMXVideoEncoderVP8
 
 # Media: libISV
-PRODUCT_PACKAGES += \
-    libisv_omx_core
+#PRODUCT_PACKAGES += libisv_omx_core
 
 # PowerHAL
 PRODUCT_PACKAGES += \
@@ -186,14 +184,13 @@ PRODUCT_PACKAGES += \
     ituxd
 
 # IMG graphics
-PRODUCT_PACKAGES += \
-    hwcomposer.baytrail
+#PRODUCT_PACKAGES += hwcomposer.baytrail
 
 # libdrm
-PRODUCT_PACKAGES += \
-    libdrm \
-    dristat \
-    drmstat
+#PRODUCT_PACKAGES += \
+#    libdrm \
+#    dristat \
+#    drmstat
 
 # Permissions
 PRODUCT_COPY_FILES += \
