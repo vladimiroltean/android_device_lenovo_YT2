@@ -141,6 +141,9 @@ PRODUCT_PACKAGES += \
 # Media: libISV
 #PRODUCT_PACKAGES += libisv_omx_core
 
+# MTP
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
+
 # PowerHAL
 PRODUCT_PACKAGES += \
     power.baytrail

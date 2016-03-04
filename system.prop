@@ -17,4 +17,3 @@ ro.enable.native.bridge.exec=1
 
 # USB
 persist.sys.isUsbOtgEnabled=1
-persist.sys.usb.config=mtp
