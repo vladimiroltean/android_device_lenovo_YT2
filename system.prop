@@ -8,6 +8,9 @@ drm.service.enabled=true
 
 # Gps
 ro.spid.gps.tty=ttyMFD1
+ro.spid.gps.pmm=disabled
+ro.spid.gps.FrqPlan=FRQ_PLAN_26MHZ_2PPM
+ro.spid.gps.RfType=GL_RF_4752_BRCM_EXT_LNA
 
 # Graphics
 ro.sf.lcd_density=320
