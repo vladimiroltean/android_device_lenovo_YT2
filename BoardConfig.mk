@@ -102,7 +102,7 @@ TARGET_IGNORE_RO_BOOT_SERIALNO := true
 TARGET_KERNEL_SOURCE := kernel/lenovo/baytrail
 TARGET_KERNEL_ARCH := x86_64
 BOARD_KERNEL_IMAGE_NAME := bzImage
-TARGET_KERNEL_CONFIG := cyanogenmod_yt2_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_YT2_8_defconfig
 
 # Kernel cmdline
 BOARD_KERNEL_CMDLINE := loglevel=4 console=logk0 earlyprintk=nologger androidboot.bootmedia=sdcard androidboot.hardware=byt_t_ffrd8 watchdog.watchdog_thresh=60 androidboot.spid=xxxx:xxxx:xxxx:xxxx:xxxx:xxxx androidboot.serialno=01234567890123456789 oops=panic panic=40 vmalloc=172M debug_locks=0 bootboost=1 vga=current i915.modeset=1 drm.vblankoffdelay=1 acpi_backlight=vendor i915.mipi_panel_id=3 androidboot.selinux=permissive
