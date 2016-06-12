@@ -27,7 +27,7 @@ LINEEND=" \\"
 COUNT=`wc -l proprietary-files.txt | awk {'print $1'}`
 DISM=`egrep -c '(^#|^$)' proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' proprietary-files.txt | sort`; do
   COUNT=`expr $COUNT - 1`
   if [ $COUNT = "0" ]; then
     LINEEND=""
@@ -110,10 +110,8 @@ PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
-COUNT=`wc -l ../YT2/proprietary-files.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' ../YT2/proprietary-files.txt`
-COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' ../YT2/proprietary-files.txt`; do
+COUNT=`grep -v ^# ../$DEVICE/proprietary-files.txt | grep -v ^$ | wc -l | awk {'print $1'}`
+for FILE in `grep -v ^# ../$DEVICE/proprietary-files.txt | grep -v ^$ | sort`; do
   COUNT=`expr $COUNT - 1`
   if [ $COUNT = "0" ]; then
     LINEEND=""

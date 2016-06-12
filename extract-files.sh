@@ -4,9 +4,10 @@ set -e
 
 export DEVICE=YT2
 export VENDOR=lenovo
+export LC_ALL=C
 
 function extract() {
-    for FILE in `egrep -v '(^#|^$)' $1`; do
+    for FILE in `grep -v ^# $1 | grep -v ^$ | sort`; do
         OLDIFS=$IFS IFS=":" PARSING_ARRAY=($FILE) IFS=$OLDIFS
         FILE=`echo ${PARSING_ARRAY[0]} | sed -e "s/^-//g"`
         DEST=${PARSING_ARRAY[1]}
