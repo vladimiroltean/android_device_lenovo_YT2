@@ -44,10 +44,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/YT2/bluetooth
 # Bootloader
 TARGET_OTA_ASSERT_DEVICE := YT2,yt2
 
-# Camera
-INTEL_USE_CAMERA_UVC := true
-INTEL_VIDEO_XPROC_SHARING := true
-
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
@@ -67,33 +63,17 @@ BOARD_EGL_CFG := device/lenovo/YT2/rootdir/system/etc/egl.cfg
 # Houdini: enable ARM codegen for x86
 BUILD_ARM_FOR_X86 := true
 
-# IMG graphics
-BOARD_GFX_REV := RGX6400
-ENABLE_IMG_GRAPHICS := true
-ENABLE_MRFL_GRAPHICS := true
-INTEL_HWC_MOOREFIELD := true
-HWUI_IMG_FBO_CACHE_OPTIM := true
-TARGET_INTEL_HWCOMPOSER_FORCE_ONLY_ONE_RGB_LAYER := true
-
-# IMG Graphics: System's VSYNC phase offsets in nanoseconds
+# Graphics
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
+OVERRIDE_RS_DRIVER := libRSDriver_intel.so
+USE_OPENGL_RENDERER := true
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.opengles.version = 196608
 
 MAX_EGL_CACHE_ENTRY_SIZE := 65536
 MAX_EGL_CACHE_SIZE := 1048576
-
-INTEL_VA := true
-BUILD_WITH_FULL_STAGEFRIGHT := true
-BOARD_USES_VIDEO := true
-
-# Disable IMG RS GPU driver
-# OVERRIDE_RS_DRIVER := libPVRRS.so
-
-# enabled to carry out all drawing operations performed on a View's canvas with GPU for 2D rendering pipeline.
-USE_OPENGL_RENDERER := true
 
 # Init
 TARGET_IGNORE_RO_BOOT_SERIALNO := true
@@ -113,29 +93,6 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Logd
 TARGET_USES_LOGD := false
 
-# Media
-BOARD_USES_WRS_OMXIL_CORE := true
-BOARD_USES_MRST_OMX := true
-USE_HW_VP8 := true
-
-# Media: DRM Protected Video
-BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
-USE_INTEL_SECURE_AVC := true
-
-# Settings for the Media SDK library and plug-ins:
-# - USE_MEDIASDK: use Media SDK support or not
-# - MFX_IPP: sets IPP library optimization to use
-USE_MEDIASDK := true
-MFX_IPP := p8
-
-# Video Post Processing
-TARGET_HAS_ISV := true
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.intel.isv.vpp = 1 \
-    persist.intel.isv.frc = 1
-
-COMMON_GLOBAL_CFLAGS += -DGFX_BUF_EXT
-
 # Partitions
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
@@ -152,10 +109,6 @@ TARGET_POWERHAL_VARIANT := baytrail
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 TARGET_RECOVERY_FSTAB := device/lenovo/YT2/rootdir/fstab.byt_t_ffrd8
-
-# Security
-BUILD_WITH_SECURITY_FRAMEWORK := chaabi_token
-BUILD_WITH_CHAABI_SUPPORT := true
 
 # Wifi
 BOARD_WLAN_DEVICE           := bcmdhd

@@ -98,49 +98,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
-# Media: SDK and OMX IL components
-PRODUCT_PACKAGES += \
-    msvdx_bin \
-    topaz_bin
-
-# Media: libva
-#PRODUCT_PACKAGES += \
-#    libva \
-#    libva-android \
-#    libva-tpi \
-#    vainfo
-
-# Media: libstagefrighthw
-#PRODUCT_PACKAGES += libstagefrighthw
-
-# Media: libmix
-#PRODUCT_PACKAGES += \
-#    libmixvbp_mpeg4 \
-#    libmixvbp_h264 \
-#    libmixvbp_h264secure \
-#    libmixvbp_vc1 \
-#    libmixvbp_vp8 \
-#    libva_videodecoder \
-#    libva_videoencoder
-
-#PRODUCT_PACKAGES += \
-#    libwrs_omxil_common \
-#    libwrs_omxil_core_pvwrapped \
-#    libOMXVideoDecoderAVC \
-#    libOMXVideoDecoderH263 \
-#    libOMXVideoDecoderMPEG4 \
-#    libOMXVideoDecoderWMV \
-#    libOMXVideoDecoderVP8 \
-#    libOMXVideoDecoderVP9HWR \
-#    libOMXVideoDecoderVP9Hybrid \
-#    libOMXVideoEncoderAVC \
-#    libOMXVideoEncoderH263 \
-#    libOMXVideoEncoderMPEG4 \
-#    libOMXVideoEncoderVP8
-
-# Media: libISV
-#PRODUCT_PACKAGES += libisv_omx_core
-
 # MTP
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
 
@@ -160,7 +117,6 @@ PRODUCT_PACKAGES += \
     init.diag.rc \
     init.firmware.rc \
     init.gps.rc \
-    init.modem.rc \
     init.net.eth0.sh \
     init.platform.gengfx.rc \
     init.platform.usb.rc \
@@ -185,15 +141,6 @@ PRODUCT_COPY_FILES += \
 ENABLE_ITUXD := true
 PRODUCT_PACKAGES += \
     ituxd
-
-# IMG graphics
-#PRODUCT_PACKAGES += hwcomposer.baytrail
-
-# libdrm
-#PRODUCT_PACKAGES += \
-#    libdrm \
-#    dristat \
-#    drmstat
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -224,6 +171,3 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf
-
-# WiFi Firmware
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm43341/device-bcm.mk)

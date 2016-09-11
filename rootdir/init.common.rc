@@ -190,11 +190,6 @@ service bcu_cpufreqrel /system/bin/bcu_cpufreqrel
     oneshot
     disabled
 
-service ct_monitor /system/bin/ct_monitor
-    class core
-    oneshot
-    user root
-
 service charger_app /charger
     class charger
     user root
