@@ -231,6 +231,7 @@ lib/libkeymaster.so
 lib/hw/keystore.baytrail.so
 lib/libmeimm.so
 lib/liboemcrypto.so
+lib/libsecmem.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libWVStreamControlAPI_L1.so
@@ -245,7 +246,10 @@ lib/egl/libGLES_intel7.so
 lib/hw/gralloc.baytrail.so
 lib/hw/hwcomposer.baytrail.so
 lib/i965_drv_video.so
+lib/igfxcmrt32.so
 lib/libGLES_intel7.so
+lib/libigdbcl.so
+lib/libpcp.so
 lib/libRSDriverMlc_intel7.so
 lib/libRSDriverUmd_intel7.so
 lib/libRSDriver_intel7.so
@@ -265,6 +269,8 @@ lib/libmultidisplay.so
 lib/libpciaccess.so
 lib/libskuwa.so
 lib/libvpp_setting.so
+lib/libwsbm.so
+vendor/lib/libigdfcl.so
 
 bin/bd_prov
 bin/bcu_cpufreqrel
@@ -313,9 +319,13 @@ etc/binfmt_misc/arm_exe
 bin/houdini
 lib/libhoudini.so
 
+# Intel hardware
+lib/libintelmetadatabuffer.so
+
 # OMX
 lib/libgabi++-mfx.so
 lib/libisv_omx_core.so
+lib/libmd.so
 lib/libmdp_omx_core.so
 lib/libmfxhw32.so
 lib/libmfx_mix_h264ve.so
@@ -339,15 +349,21 @@ lib/libOMXVideoEncoderAVC.so
 lib/libOMXVideoEncoderH263.so
 lib/libOMXVideoEncoderMPEG4.so
 lib/libpavp.so
+lib/libpavpdll.so
+lib/pvr_drv_video.so
 lib/libstagefrighthw.so
+lib/libstagefright_soft_aacenc_mdp.so
 lib/libstagefright_soft_aacdec_mdp.so
 lib/libstagefright_soft_amrdec_mdp.so
 lib/libstagefright_soft_amrenc_mdp.so
 lib/libstagefright_soft_mp3dec_mdp.so
 lib/libstagefright_soft_vorbisdec_mdp.so
+lib/libstagefright_soft_wmadec_mdp.so
 lib/libstlport-mfx.so
 lib/libva-android.so
+lib/libva-tpi.so
 lib/libva.so
+lib/libva_videoencoder.so
 lib/libva_videodecoder.so
 lib/libwrs_omxil_common.so
 lib/libwrs_omxil_core_pvwrapped.so
@@ -356,6 +372,23 @@ lib/libwrs_omxil_core_pvwrapped.so
 lib/arm/libnetd_client.so
 lib/hw/sensors.byt_t_ffrd8.so
 lib/libnetd_client.so
+
+# Widi
+-app/WidiInputService/WidiInputService.apk
+-app/WidiReceiver/WidiReceiver.apk
+etc/permissions/com.intel.widi.sink.xml
+etc/widi/widi.conf
+-framework/com.intel.widi.sink.jar
+lib/libhwcwidi.so
+lib/libstagefright_hdcp.so
+lib/libwidiedid.so
+lib/libwidimedia.so
+lib/libwidimediasink.so
+lib/libwidirtsp.so
+lib/libwidirtspsink.so
+lib/libwidirtspsink_jni.so
+lib/libwidiuibc.so
+lib/libwidiuibcjni.so
 
 # WiFi
 etc/firmware/fw_bcmdhd.bin_43241_b4
