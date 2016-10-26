@@ -44,7 +44,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mass_storge,mtp
 
 # Kernel
-BOARD_KERNEL_CMDLINE := ignore_loglevel debug androidboot.bootmedia=sdcard androidboot.hardware=byt_t_ffrd8 watchdog.watchdog_thresh=60 androidboot.spid=0000:0000:0000:0007:0000:0005 androidboot.serialno=Baytrail5A6F4E4F vmalloc=172M debug_locks=0 bootboost=1 vga=current i915.modeset=1 drm.vblankoffdelay=1 acpi_backlight=vendor i915.mipi_panel_id=3 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := loglevel=4 console=logk0 earlyprintk=nologger androidboot.bootmedia=sdcard androidboot.hardware=byt_t_ffrd8 watchdog.watchdog_thresh=60 androidboot.spid=0000:0000:0000:0007:0000:0005 androidboot.serialno=Baytrail3C6B4F36     oops=panic panic=40 vmalloc=172M debug_locks=0 bootboost=1 vga=current i915.modeset=1 drm.vblankoffdelay=1 acpi_backlight=vendor i915.mipi_panel_id=3  androidboot.mode=main
 BOARD_KERNEL_PAGESIZE := 2048
 
 BOARD_KERNEL_IMAGE_NAME := bzImage
@@ -78,9 +78,10 @@ BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
 BOARD_VOLD_MAX_PARTITIONS := 20
 
 # Recovery
-RECOVERY_VARIANT := twrp
-
+#RECOVERY_VARIANT := twrp
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
+
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/fstab.byt_t_ffrd8
 
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
