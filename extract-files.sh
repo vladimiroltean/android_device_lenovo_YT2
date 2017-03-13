@@ -2,7 +2,7 @@
 
 set -e
 
-export DEVICE=YT2
+export DEVICE=yt2
 export VENDOR=lenovo
 export LC_ALL=C
 

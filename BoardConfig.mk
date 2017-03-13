@@ -39,10 +39,10 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/YT2/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/yt2/bluetooth
 
 # Bootloader
-TARGET_OTA_ASSERT_DEVICE := YT2,yt2
+TARGET_OTA_ASSERT_DEVICE := yt2,yt2
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -58,7 +58,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # EGL config
-BOARD_EGL_CFG := device/lenovo/YT2/rootdir/system/etc/egl.cfg
+BOARD_EGL_CFG := device/lenovo/yt2/rootdir/system/etc/egl.cfg
 
 # Houdini: enable ARM codegen for x86
 BUILD_ARM_FOR_X86 := true
@@ -82,7 +82,7 @@ TARGET_IGNORE_RO_BOOT_SERIALNO := true
 TARGET_KERNEL_SOURCE := kernel/lenovo/baytrail
 TARGET_KERNEL_ARCH := x86_64
 BOARD_KERNEL_IMAGE_NAME := bzImage
-TARGET_KERNEL_CONFIG := cyanogenmod_YT2_8_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_yt2
 
 # Kernel cmdline
 BOARD_KERNEL_CMDLINE := loglevel=4 console=logk0 earlyprintk=nologger androidboot.bootmedia=sdcard androidboot.hardware=byt_t_ffrd8 watchdog.watchdog_thresh=60 androidboot.spid=xxxx:xxxx:xxxx:xxxx:xxxx:xxxx androidboot.serialno=01234567890123456789 oops=panic panic=40 vmalloc=172M debug_locks=0 bootboost=1 vga=current i915.modeset=1 drm.vblankoffdelay=1 acpi_backlight=vendor i915.mipi_panel_id=3 androidboot.selinux=permissive
@@ -108,7 +108,7 @@ TARGET_POWERHAL_VARIANT := baytrail
 # Recovery
 RECOVERY_VARIANT := twrp
 
-TARGET_RECOVERY_FSTAB := device/lenovo/YT2/rootdir/fstab.byt_t_ffrd8
+TARGET_RECOVERY_FSTAB := device/lenovo/yt2/rootdir/fstab.byt_t_ffrd8
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TW_INPUT_BLACKLIST := "accelerometer"
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -148,4 +148,4 @@ WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcmdhd.bin_43241_b4"
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcm43241.ko"
 
 # inherit from the proprietary version
--include vendor/lenovo/YT2/BoardConfigVendor.mk
+-include vendor/lenovo/yt2/BoardConfigVendor.mk
